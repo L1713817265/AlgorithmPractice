@@ -8,7 +8,7 @@ int main()
 {
     int target = 0;
     int arraylen = 0;
-    int array[] = {};
+    int array[] = {0};
     int idx, idx1;
     int count = 0;
     int sum = 0;

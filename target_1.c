@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 
 #define RANGE_NUM 10
 
@@ -8,7 +9,7 @@ int main()
 {
     int target = 0;
     int arraylen = 0;
-    int array[] = {0};
+    int array[] = {};
     int idx, idx1;
     int count = 0;
     int sum = 0;
@@ -18,6 +19,8 @@ int main()
     scanf("%d", &target);
     printf("请输入数组长度:\n");
     scanf("%d", &arraylen);
+
+    memset(array, 0, arraylen);
 
     srand(time(NULL));
     

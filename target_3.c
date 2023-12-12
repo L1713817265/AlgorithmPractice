@@ -6,27 +6,21 @@ int array[] = {1, 1, 2, 3, 7, 9, 9, 11};
 
 int main()
 {
-    int arraylen = sizeof(array) / sizeof(int);
-    int arrayChange[arraylen];
-    int count = 0;
-    memset(arrayChange, 0, sizeof(arrayChange));
+    int position = 0;
 
-    arrayChange[0] = array[0];
-    int flagNum = 0;
-
-    for(int idx = 0; idx < (arraylen - 1); idx++)
+    for(int idx = 1; idx < (sizeof(array) / sizeof(int)); idx++)
     {
-        if(array[idx] != array[idx + 1])
+        if(array[idx] != array[idx - 1])
         {
-            count += 1;
-            arrayChange[count] = array[idx + 1];
+            position++;
+            array[position] = array[idx];
         }
     }
 
     printf("数组为：");
-    for(int idx = 0; idx < (count + 1); idx++)
+    for(int idx = 0; idx < (position + 1); idx++)
     {
-        printf(" %d", arrayChange[idx]);
+        printf(" %d", array[idx]);
     }
     printf("\n");
 

@@ -48,5 +48,4 @@ int main()
         printf(" %d", nums[idx]);
     }
     printf("\n");
-    
 }

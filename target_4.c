@@ -9,7 +9,7 @@ int main()
 {
     int arraylen = 0;
     int val = 0;
-    int count = 0;
+    int position = 0;
 
     printf("请输入val值:\n");
     scanf("%d", &val);
@@ -30,22 +30,14 @@ int main()
     }
     printf("\n");
 
+    printf("数组为：       ");
     for(int idx = 0; idx < arraylen; idx++)
     {
-        if(nums[idx] == val)
+        if(nums[idx] != val)
         {
-            count++;
-            for(int idx1 = (idx + 1); idx1 < arraylen; idx1++)
-            {
-                nums[idx1 -1] = nums[idx1];
-            }
+            nums[position++] = nums[idx];
+            printf(" %d", nums[idx]);
         }
-    }
-
-    printf("数组为：       ");
-    for(int idx = 0; idx < (arraylen - count); idx++)
-    {
-        printf(" %d", nums[idx]);
     }
     printf("\n");
 }

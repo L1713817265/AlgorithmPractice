@@ -12,6 +12,10 @@ int printArray(int *array, int length)
 
 int insertSort(int *array, int length)
 {
+    if(!array)
+    {
+        return;
+    }
     int ret = 0;
     int temp = 0;
     int cur = 0;

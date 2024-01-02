@@ -17,6 +17,10 @@ int printArray(int *array, int length)
 int selectSort(int *array, int length)
 {
     int ret = 0;
+    if(!array)
+    {
+        return;
+    }
     int minValue = 0;
     int minIndex = 0;
     for(int pos = 0; pos < length; pos++)

@@ -3,6 +3,10 @@
 int printArray(int *array, int length)
 {
     int ret = 0;
+    if(!array)
+    {
+        return 0;
+    }
     for(int idx = 0; idx < length; idx++)
     {
         printf("array[%d] = %d\n", idx, array[idx]);
